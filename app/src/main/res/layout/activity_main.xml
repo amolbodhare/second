@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/main_back_color"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context=".activities.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <ImageView
+                android:id="@+id/drawerMenu"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/clickable_trans_bg"
+                android:clickable="true"
+                android:padding="13dp"
+                android:src="@drawable/ic_sort_black_24dp"
+                android:visibility="invisible"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/titleName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="100dp"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:letterSpacing="0.1"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:tag=""
+                android:text="YourChallenge"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/optionMenu"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/clickable_trans_bg"
+                android:clickable="true"
+                android:onClick="OnMenuClick"
+                android:padding="13dp"
+                android:src="@drawable/ic_sort_black_24"
+                app:tint="@color/black" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/viewPagerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginTop="60dp">
+
+            <ImageView
+                android:id="@+id/next_imv"
+                android:visibility="invisible"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:backgroundTint="#380054"
+                android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+
+            <ImageView
+                android:id="@+id/prev_imv"
+                android:visibility="invisible"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:backgroundTint="#380054"
+                android:rotation="180"
+                android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/person_details_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RV"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+</ScrollView>

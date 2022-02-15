@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+            <item
+                android:id="@+id/product"
+                android:icon="@drawable/ic_product_vector"
+                android:title="Product"
+                app:showAsAction="never"/>
+            <item
+                android:id="@+id/download"
+                android:icon="@drawable/ic_download_vector"
+                android:title="Download"
+                app:showAsAction="never"/>
+            <item
+                android:id="@+id/pricing"
+                android:icon="@drawable/ic_pricing_vector"
+                android:title="Pricing"
+                app:showAsAction="never"/>
+
+
+
+</menu>
